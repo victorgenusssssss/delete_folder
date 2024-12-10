@@ -1,0 +1,9 @@
+---
+- name: Remove the new_file_use directory
+  hosts: all
+  become: yes
+  tasks:
+    - name: Remove new_file_use directory
+      file:
+        path: /home/doiadm/new_file_use
+        state: absent
